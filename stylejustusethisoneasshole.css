@@ -1,0 +1,26 @@
+body{
+        font-family: sans-serif;
+        font-size: 20px;
+        text-align: justify;
+        margin: 100px 200px 0 400px;
+
+    }
+    #sidebar{
+    font-size:20px;
+    text-align: left;
+    position: fixed;
+    left: 10px;
+    top: 100px;
+    width: 300px;
+    background-color: white;
+    opacity: 0.6;
+    font color: black;
+
+    }
+
+    .head h1{
+
+        top: px;
+        background-color: white;
+        background-size: 1000px 50px;
+    }

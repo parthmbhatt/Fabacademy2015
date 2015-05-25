@@ -1,0 +1,52 @@
+<!doctype html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>computer-aided design</title>
+</head>
+<link rel="stylesheet" href="stylejustusethisoneasshole.css">
+
+<body>
+	<div id="sidebar">
+
+</div>
+
+<div class="head">
+<h1>computer-aided design </h1>
+</div>
+<hr>
+<h2>Conceptualization and Scribbles</h2>
+<p>I recently stumbled upon this really cool game called <a href="http://www.besiege.spiderlinggames.co.uk/">Besiege</a> and I thought to myself, why not create a catapult that actually aims for you.<br>
+The idea is simple, a shaft, that can rotate around the X and Z axes and that can fire a projectile with variable power</p>
+<h3>Functionality breakdown</h3>
+<p>The Base of the machine will house the motors and the board as well as provide a pivot for the rotting table<br>
+	The channel will be hinged to the rotating table at one end and will tilt via a curved rack which will pass through a slot in the table ( the centres of the curved rack and the hinge have to coincide)<br>
+	The rack will be driven by gear run by a stepper motor attached to the swiveling table<br>
+	the table will swivel using a stepper motor mounted either at the center of the table (low speed/high torque required) or at the edge in which case the table an be one large gear and the stepper can run a smaller gear to obtain a desirable gear ratio (1:10?) to turn the table<br>
+	the angle of the swivel table will be set by the user, along with the desired distance of travel and minimum height clearance, if any<br>
+	The angle and power to be applied will be calculated using the equations of projectile motion, taking into consideration viscous drag on the projectile (ideal projectile would be a ball bearing)<br>
+	As of now I have not frozen upon a design for applying variable power to the projectile, but I'm thinking of using a ferromagnetic material as the launching plug, attached to the spring, that is pulled back by switching on the electromagnet, different power levels would translate into corresponding spring compression<br>
+
+	<h3>Drawings</h3>
+
+
+
+<p> So I made these preliminary drawings to see if I could get a fix on the form.</P>
+<img src="Images/drawing1.jpg">
+<p>In the above drawing (pardon my incredible penmanship) you can see the basic schematic for the machine which includes the firing channel, the tilting mechanism, the spring loaded power delivery, rotating base and electronics housing</p>
+<img src="Images/drawing2.jpg">
+<p>This sketch explains the mechanism for the tilt a little better. The gear would be attached to a stepper motor controlled by an arduino board.</p>
+<h3>CAD- SolidWorks</h3>
+<p>I used solidworks to make a representation of what the machine might look like</p>
+<img src="Images/solidworks1.jpg"><br>
+<p>here the base is transparent so the curved rack and pinion can be seen</p>
+<img src="Images/solidworks2.jpg"><br>
+<p>and here's a needlessly pretty render of the machine. Looks a bit like a Roomba, maybe I could get it to move around the room and terrorize house pets...</p>
+<img src="Images/render.jpg">
+</body>
+<script src="jquery-2.1.3.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#sidebar").load("nav.html");
+});
+</script>
+</body>

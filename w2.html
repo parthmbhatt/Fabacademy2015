@@ -1,0 +1,76 @@
+<!doctype html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>computer-aided cutting</title>
+</head>
+<link rel="stylesheet" href="stylejustusethisoneasshole.css">
+
+<body>
+	<div id="sidebar">
+
+</div>
+
+<div class="head">
+<h1>computer-aided Cutting </h1>
+</div>
+<hr>
+<h2>Conceptualization</h2>
+<p>At FabLab CEPT I've seen a lot of students make these modular units or shapes that they cut out to then be combined in various formations to create structures akin to polymers. often these tiny units will be combines into larger units , which then form sub-units for an even larger assembly</p>
+<p>Drawing inspiration from these and my undying fascination for LEGO , I thought to design and make such a shape, I started conceptualizing with a right parallelogram <i>(read: rectangle)</i> as shown in the scribbles below </p> 
+<img src="Images/w2scrib1.jpg">
+
+<p>This shape has the potential to be combined along the X and Y axes, and I imagine I'd be able to make interesting orthogonal structures, butI wanted the capability to slot the pieces in along the diagonal as well, however since the diagonal distance is greater than the orthogonal distance I would be unable to, and even if I were to insert slots along the diagonal but at a shorter distance , to accommodate the slots, I'd be stuck with an asymmetrical design that I'd be able to combine in only 3 ways</p>
+<img src="Images/w2scrib2.jpg">
+<p>disillusioned by the limitations of the 4 sided unit, I stated thinking about increasing the sides, perhaps a hexagon for more sides, slots and holes?</p>
+<img src="Images/w2scrib3.jpg">
+<p>Then I was suggested the use of a triangle rather than a rectangular shape, as al its sides are equal, the basic configuration would give me 3 modes of combination on the face</p>
+<img src="Images/w2scrib4.jpg">
+<p>and the slots would be aligned to the sides of the triangle, ie; at 60 degrees to one another</p>
+<img src="Images/w2scrib5.jpg">
+<img src="Images/trisketch.jpg">
+<p>Here I've defined the equilateral triangle with slots that will be the profile of my piece. I've used 2.5mm as the width because the material we have is of that thickness. 10mm is an arbitrary  (yet satisfying) value. Note the dimensioning near the top is in grey , thats because it is a driven dimension, and is only an indicator of the dimension of that line, and doesn't actually affect the dimension. This is because the figure is fully defined geometrically, so if I pull a corner and drag it the shape will preserve itself, only the vertices (marked in the red circles) will change</p>
+<p>This is an extrusion of the shape</p>
+<img src="Images/triangle1.jpg">
+<p>Next, I had to design the slots. I used three rectangles , sharing a common center , and rotated them so they were at 60 degree angles to one another.</p>
+<img src="Images/slot.jpg">
+<p>The slots are arranged so that they are coincident to the medians of the triangle and mirrored around the adjacent median ( so if i change the distance of one from the centroid they all change accordingly ) and i set the distance between their centers as 20 mm, as the displacement (not distance! because the two points aren't horizontally or vertically aligned solidworks will try to dimension the vertical or horizontal distance between the points ) between the centers of the rectangular projections is 20mm. Also, setting any one rectangle from the parent slot horizontal sets the orientation (such is the beauty of symmetry)</p>
+<img src="Images/slots.jpg">
+<p>Now if I include the slots in the original extrusion I get an updated shape</p>
+<img src="Images/triangle2.jpg">
+<p>Once I decided upon the main shape, I realized it was possible to set the dimensions of the various features of the shape so that I could lay the pieces out next to each other. I decided to use relations in SolidWorks to define my shape so I could then drag the shapes into the configuration I wanted. </p>
+<img src="Images/fitsketch.jpg">
+<p>The extensive dimensioning and relation-definition lets the shapes behave in the exact manner that i require them to, I basically made two identical mirrored copies f the shapes, placed them in such a way that the slots would be 20 mm distant to allow combination in this arrangement, and then dragged the corresponding sides of the triangles to meet. <br> unfortunately I couldn't find the exact lines that I applied the relation to so I couldn't go back in the process to illustrate it stepwise</p>
+<hr>
+<h2>Laser cutting and assembly</h2>
+
+<p>So once I had my shape I proceeded to cut several instances out. I arranged themin the most efficient manner i could think of, exported it to DXF <i>(which is much much lighter because it doesn't carry those tons of relations with it and is good as an export format)</i> which I opened and printed from Rhino. the nice thing about Rhino is that it allows you to select duplicate lines <i>(via the <strong>SelDup</strong> command)</i> and delete them, making the cutting process a little shorter</p>
+<img src="Images/lasercut.jpeg">
+<p>As soon as I got the pieces off the board, I tried them out in whatever formation I could muster</p>
+<img src="Images/experiment1.png">
+<p>Sure enough, You can see the pieces can be combined in the air as well as while being laid out next to one another. However, one problem is instantly evident, that is I can't stack more than one row of these on the ground, the vertices are obstructing some joins. 
+	<br> Also, The slots are a little big due to the kerf of the laser (the material removed due to the width of the laser beam ) So I decided to make the slots 2.3mm wide instead of 2.5mm.</p>
+<img src="Images/cantable.jpg">
+<p>To rectify this, I take the design back to CAD and well, simply snip off a bit from all sides <i>(along the lines)</i></p>
+<img src="Images/newtri.jpg">
+<p>And so I'm left with the following shapes <i>(I left the regular triangles in to experiment with them)</i></p>
+<img src="Images/finalcut.jpg">
+<p>Here are some structures I rigged up using the modules</p>
+<p>This first one is mostly a demonstration of the fast that These structures can be combined in more that  one row</p>
+<img src="Images/experiment2.jpeg">
+<img src="Images/experiment3.jpeg">
+<p>Using the older triangles that retained their vertices, I created a sort of tower, but to support it i had to use the newer modules</p>
+<img src="Images/Alientower1.jpeg">
+<img src="Images/Alientower2.jpeg">
+<p>With the newer shapes, I went for Using as many of the joins as possible and came up with this</p>
+<img src="Images/finalform1.jpg">
+<img src="Images/finalform.jpg"> <br>
+<img src="Images/finalformtop.jpg">
+<img src="Images/finalformside.jpg">
+</body>
+<script src="jquery-2.1.3.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#sidebar").load("nav.html");
+});
+</script>
+</body>

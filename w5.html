@@ -1,0 +1,100 @@
+<!doctype html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Electronics Design</title>
+</head>
+<link rel="stylesheet" href="stylejustusethisoneasshole.css">
+
+<body>
+	<div id="sidebar">
+
+</div>
+
+<div class="head">
+<h1>Electronics design</h1>
+</div>
+<hr>
+<h2></h2>
+<p>This weeks assignment was to take the existing echo hello-world board, and modify it to have a button and an LED at the very least</p> 
+<img src="">
+
+<p>The first step was to downoad and familarize myself with eagle, whic was quite simple. It works on commands similar to Rhino or AutoCad, and the omnly commands I would need for these simple assignments would be:</p>
+<p><ul><strong>
+<li>add</li>
+<li>wire</li>
+<li>del</li>
+<li>move</li>
+<li>name</li>
+<li>label</li>
+</ul></strong>
+<p>for the schematic , and </p>
+<strong>
+<ul>
+<li>route</li>
+<li>ripup</li>
+<li>ratsnest</li>
+<li>drc</li>
+
+</strong>
+
+
+</ul>
+
+for the board file</p>
+<img src="">
+<p>Next i downloaded and installed the component libraries as per the tutorial <a href="http://academy.cba.mit.edu/content/tutorials/akf/electronics_design_eagle.html">here</a></p>
+<img src="">
+<p>The next step is to add all the parts as mentioned</p>
+<img src="images/hellosch.JPG">
+<p>I was glad not to have to do the wiring of these components, as they seemed very comple. the ability to name the ends of the wires so that they all link up correctly is a life saver</p>
+<img src="">
+<img src="">
+<p> Next, I had to open the board , at first i was presented with this:</p>
+<img src="images/brd.JPG">
+<p>after which i proceeded to arrange the components on the field , somewhat randomly and ran the autoroute</p>
+<img src="images/autoroute.jpg">
+<img src="images/drcchecking.jpg">
+<img src="images/ripup.jpg">
+<p>after trying a few iterations and failing, I decided to mimic the tutorials placement of the parts and autoroute it </p>
+<img src="images/Tutorial.jpg">
+<img src="images/Tutorial2.jpg">
+<img src="images/helloechotutorialsuccess.jpg">
+<img src="images/hello_world.png">
+
+<p>However the routing didnt pass the design check(which i unfortunately realised after trying to fabricate it), so i had to route it manually, having to add a jumper in the schematic to complete the circuit</p>
+<img src="images/jumper.jpg">
+<img src="images/finalhelloecho.JPG">
+<img src="images/hello_world_traces2.png">
+<p>on to the manufacturing</p>
+<img src="images/thepython.jpg">
+<p>and the board, stuffed</p>
+<img src="images/helloechoboard.jpg">
+<p></p>
+<img src="">
+<p></p>
+<hr>
+<h2></h2>
+
+<p></p>
+<img src="">
+<p></p>
+<img src="">
+<p></p>
+<img src="">
+<p></i></p>
+<img src="">
+<p></p>
+<img src="">
+<p></p>
+<p></p>
+<img src="">
+<img src="">
+
+</body>
+<script src="jquery-2.1.3.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#sidebar").load("nav.html");
+});
+</script>
+</body>

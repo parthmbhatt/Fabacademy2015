@@ -1,0 +1,92 @@
+<!doctype html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Embedded Programming</title>
+</head>
+<link rel="stylesheet" href="stylejustusethisoneasshole.css">
+
+<body>
+	<div id="sidebar">
+
+</div>
+
+<div class="head">
+<h1>Embedded Programming</h1>
+</div>
+<hr>
+<h2></h2>
+<p> Last week we modified the schematics of, and made the "echo hello board". This weeks assignment is to understand the microcontroller, read its data sheet, and make it do something.</p> 
+<img src="images/helloechoboard.jpg">
+
+<p>To start off i took a good look at the data sheet of the ATtiny44</p>
+<img src="images/attiny44dpindiagram.JPG">
+<p>as far as my understanding goes , this is what the above mentioned pins do:</p>
+<ul>
+<li>1-VCC is the power in, or the power supply pin </li>
+<li>2-CLK is the clock pin</li>
+<li>3-XTAL is the crystal in pin, used in conjunction with the CLK pin for external clocks</li>
+<li>4-RESET pin, used to either run a program (high voltage) or accept a program (low voltage)</li>
+<li>5-CKOUT, which i tihnk is used to set the clock for another microcontroller</li>
+<li>6-programmable</li>
+<li>7-programmable MOSI (Master out Slave in)</li>
+<li>8-programmable MISO (Master in slave out)</li>
+<li>9-programmable SCK ( data out clock)</li>
+<li>10-programmable</li>
+<li>11-Programmable</li>
+<li>12-programmable</li>
+<li>13-programmable</li>
+<li>14- GND or ground pin</li>
+
+
+
+
+
+</ul>
+<p>After digging aroung a little, I found that the Arduino IDE would be the simplest environment to start with, because it could compile the code before uploading</p>
+<img src="">
+<p>Interesting to note, is that the ATtiny does not have a UART serial pin, which basically means that if you try to initiate serial communication with it by using 'serial.begin(9600)' , you will most likely get an error if you try to use that protocol. Instead, I'd have to define a set of software serial pins that emulated serial ocmmunication with the board if i wanted it to perform any such task</p>
+
+<p>However, for simpler functions, I have no need of serial communication. </p>
+
+<p>To start with, I take arduinos built in example 'Blink' and after modifying the pins, I upload it to my board</p>
+<img src="images/ardublink.JPG">
+<img src="images/echohelloblinkboard.jpg">
+<p>Sucess! my very first board that does something! however, I still have a button that I haven't yet managed to use.
+Also , It's noteworthy that the delay (1000ms) doens't actually last for 1 second, rather is lasts much longer </p>
+<p>To use the button I had to program another pin , ie: pinMode(buttonPin, INPUT). I wrote a very simple program to check for the state of  the burron using 'digitalread' and if the value is LOW (the omron switchs value is LOW when depressed.. hehe) it turns on the LED </p>
+<img src="images/buttonblink.JPG">
+<p></p>
+<img src="images/buttonoff.jpg">
+<p></p>
+<img src="images/buttonon.jpg">
+<p></p>
+<img src="">
+<p></p>
+<img src="">
+<p></p>
+<hr>
+<h2></h2>
+
+<p></p>
+<img src="">
+<p></p>
+<img src="">
+<p></p>
+<img src="">
+<p></i></p>
+<img src="">
+<p></p>
+<img src="">
+<p></p>
+<p></p>
+<img src="">
+<img src="">
+
+</body>
+<script src="jquery-2.1.3.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#sidebar").load("nav.html");
+});
+</script>
+</body>
